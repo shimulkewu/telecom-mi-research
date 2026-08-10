@@ -1,1 +1,57 @@
-
+causal-mi-telecom/
+│
+├── README.md                          # Master overview (see template below)
+├── LICENSE                            # MIT or Apache 2.0
+├── requirements.txt                   # Full dependency list
+├── .gitignore                         # Python standard
+│
+├── docs/
+│   ├── research_overview.md           # Your formal problem statement (from Research_Response.pdf)
+│   ├── gap_analysis.md                # Your novelty positioning (from Literature_Gap_Analysis)
+│   ├── gantt_chart.md                 # Your G.O.T. timeline (from Gantt_Chart.docx)
+│   ├── literature_review.md           # Your full LR (convert from Word)
+│   └── references.bib                 # All citations in BibTeX format
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb      # Exploring TeleLogs/HDFS/BGL
+│   ├── 02_activation_extraction.ipynb # First hooks + activations
+│   ├── 03_sae_training.ipynb          # Domain-confined SAE training
+│   ├── 04_feature_visualization.ipynb # Visualising discovered features
+│   ├── 05_activation_patching.ipynb   # Causal validation
+│   └── 06_robustness_testing.ipynb    # OOD + adversarial stress tests
+│
+├── src/
+│   ├── __init__.py
+│   ├── config.py                      # Central configuration
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── loader.py                  # Load HDFS/BGL/TeleLogs
+│   │   └── preprocess.py              # Clean, tokenise, create prompt pairs
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── llm_loader.py              # Load GPT-2/Mistral/Gemma with TransformerLens
+│   │   └── classifier.py              # Baseline classifier (if needed)
+│   ├── interpretability/
+│   │   ├── __init__.py
+│   │   ├── sae.py                     # Sparse Autoencoder implementation
+│   │   ├── activation_extraction.py   # Hook-based activation caching
+│   │   ├── feature_analysis.py        # Top-feature identification
+│   │   ├── activation_patching.py     # Causal intervention
+│   │   ├── circuit_discovery.py       # ACDC or custom discovery
+│   │   └── robustness.py              # OOD and adversarial testing
+│   └── evaluation/
+│       ├── __init__.py
+│       ├── metrics.py                 # Faithfulness, completeness, ICPR, IIA
+│       └── baselines.py               # Compare against LogPrompt, LogExpert, etc.
+│
+├── experiments/
+│   ├── run_full_pipeline.py           # End-to-end experiment script
+│   └── benchmark_comparison.py        # Compare against baselines
+│
+├── results/
+│   ├── figures/                       # All generated figures
+│   └── logs/                          # Experiment logs
+│
+└── data/
+    ├── raw/                           # Placeholder for raw datasets
+    └── processed/                     # Preprocessed prompt pairs
