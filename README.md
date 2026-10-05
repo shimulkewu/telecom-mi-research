@@ -4,7 +4,7 @@ Toward Robust and Causal Mechanistic Interpretability in LLMs for Safety-Critica
 # Causal Mechanistic Interpretability for Telecom Network Fault Diagnosis
 
 **Researcher:** Md. Yakub Hossan Khan (Shimul)  
-**Program:** Master of Computing (Research), Multimedia University (MMU)  
+**Program:** PHD research in Computing (Research), Multimedia University (MMU)  
 **Supervisor:** Dr. Tan  
 **Domain:** Mechanistic Interpretability | Trustworthy AI | Telecom Network Fault Diagnosis  
 
